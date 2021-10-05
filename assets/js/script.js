@@ -35,6 +35,7 @@ function generateQuiz() {
                 console.log('ERROR MESSAGE');
                 document.getElementById("errorPage").style.display = "block";
             } else {
+                console.log(data);
                 questionArray = data;
                 displayQuestion();
                 generateRandomFact();
@@ -75,28 +76,28 @@ var displayQuestion = function() {
     var questionOrder = Math.floor(Math.random() * (5));
 
     if (questionOrder === 1) {
-        answer1.textContent = q.incorrect_answers[0];
-        answer2.textContent = q.incorrect_answers[1];
-        answer3.textContent = q.incorrect_answers[2];
-        answer4.textContent = q.correct_answer;
+        answer1.innerHTML = q.incorrect_answers[0];
+        answer2.innerHTML = q.incorrect_answers[1];
+        answer3.innerHTML = q.incorrect_answers[2];
+        answer4.innerHTML = q.correct_answer;
         correctAnswer = '4';
     } else if ( questionOrder === 2) {
-        answer1.textContent = q.incorrect_answers[0];
-        answer2.textContent = q.incorrect_answers[1];
-        answer3.textContent = q.correct_answer;
-        answer4.textContent = q.incorrect_answers[2];
+        answer1.innerHTML = q.incorrect_answers[0];
+        answer2.innerHTML = q.incorrect_answers[1];
+        answer3.innerHTML = q.correct_answer;
+        answer4.innerHTML = q.incorrect_answers[2];
         correctAnswer = '3';
     } else if ( questionOrder === 3) {
-        answer1.textContent = q.incorrect_answers[0];
-        answer2.textContent = q.correct_answer;
-        answer3.textContent = q.incorrect_answers[1];
-        answer4.textContent = q.incorrect_answers[2];
+        answer1.innerHTML = q.incorrect_answers[0];
+        answer2.innerHTML = q.correct_answer;
+        answer3.innerHTML = q.incorrect_answers[1];
+        answer4.innerHTML = q.incorrect_answers[2];
         correctAnswer = '2';
     } else {
-        answer1.textContent = q.correct_answer;
-        answer2.textContent = q.incorrect_answers[0];
-        answer3.textContent = q.incorrect_answers[1];
-        answer4.textContent = q.incorrect_answers[2];
+        answer1.innerHTML = q.correct_answer;
+        answer2.innerHTML = q.incorrect_answers[0];
+        answer3.innerHTML = q.incorrect_answers[1];
+        answer4.innerHTML = q.incorrect_answers[2];
         correctAnswer = '1';
     }
     $('#giphyEl').children().remove();
@@ -220,7 +221,7 @@ function generateRandomFact() {
     fetch(apiUrl).then(function(response) {
         if (response.ok) {
           response.json().then(function(data) {
-                randomFactEl.textContent = 'Fun Fact: ' + data.data.fact
+                randomFactEl.innerHTML = 'Fun Fact: ' + data.data.fact
           });
         }
     })
