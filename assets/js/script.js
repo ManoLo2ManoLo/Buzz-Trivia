@@ -1,5 +1,3 @@
-import giphyApiKey from "./apikey";
-
 const errorhomeBtn = document.getElementById('errorhomeBtn');
 const submitBtn = document.getElementById('submitBtn');
 
@@ -194,7 +192,7 @@ errorhomeBtn.onclick = function() {
 }
 
 function generateGiphyAPI() {
-    var apiUrl = 'https://api.giphy.com/v1/gifs/search?q=' + catName + '&api_key=' + giphyApiKey;
+    var apiUrl = 'https://api.giphy.com/v1/gifs/search?q=' + catName + '&api_key=xtreWFpTnhdH2BI9jKSi7X1Kz6ioQnM';
 
     fetch(apiUrl).then(function(response) {
       if (response.ok) {
