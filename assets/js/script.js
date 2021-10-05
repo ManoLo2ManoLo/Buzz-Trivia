@@ -9,6 +9,7 @@ const answer4 = document.getElementById('answer4');
 const scoreEl = document.getElementById('scoreEl');
 const finalscoreEl = document.getElementById('finalscoreEl');
 const giphyEl = document.getElementById('giphyEl');
+const randomFactEl = document.getElementById('randomFactEl')
 
 
 var catNumber = 0;
@@ -20,6 +21,7 @@ var correctAnswer = '';
 var questionArray = [];
 var catName = '';
 var giphyArray = [];
+var factArray = [];
 
 // Generates whats question the user will recive based on catefory and difficulty selected
 function generateQuiz() {
@@ -33,6 +35,7 @@ function generateQuiz() {
             } else {
                 questionArray = data;
                 displayQuestion();
+                generateRandomFact();
             }
         });
       }
@@ -42,7 +45,6 @@ function generateQuiz() {
 // Function to display question to user
 var displayQuestion = function() {
     document.getElementById("quizPage").style.display = "block";
-
     if (questionCounter > 10) {
         setfinalScore();    
     }
@@ -229,4 +231,18 @@ function generateGiphy() {
     gifImg.classList = 'giphy'
 
     giphyEl.appendChild(gifImg);
+}
+
+function generateRandomFact() {
+    var apiUrl = 'https://asli-fun-fact-api.herokuapp.com/';
+    fetch(apiUrl).then(function(response) {
+        if (response.ok) {
+            console.log(response);
+          response.json().then(function(data) {
+                console.log(data);
+                randomFactEl.textContent = 'Fun Fact: ' + data.data.fact
+          });
+        }
+    })
+    console.log(factArray);
 }
