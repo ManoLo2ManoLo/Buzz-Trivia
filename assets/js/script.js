@@ -21,7 +21,6 @@ var correctAnswer = '';
 var questionArray = [];
 var catName = '';
 var giphyArray = [];
-var factArray = [];
 
 // Generates whats question the user will recive based on catefory and difficulty selected
 function generateQuiz() {
@@ -40,8 +39,25 @@ function generateQuiz() {
         });
       }
     })
-};
 
+};
+function randomQuiz() {
+    document.getElementById("catPage").style.display = "none";
+    document.getElementById("diffPage").style.display = "none";
+
+    var apiUrl = 'https://opentdb.com/api.php?amount=10&type=multiple';
+    catName = 'Random';
+    
+    fetch(apiUrl).then(function(response) {
+        if (response.ok) {
+            response.json().then(function(data) {
+                questionArray = data;
+                displayQuestion();
+                generateRandomFact();
+            });
+        }
+    })
+}
 // Function to display question to user
 var displayQuestion = function() {
     document.getElementById("quizPage").style.display = "block";
@@ -237,9 +253,7 @@ function generateRandomFact() {
     var apiUrl = 'https://asli-fun-fact-api.herokuapp.com/';
     fetch(apiUrl).then(function(response) {
         if (response.ok) {
-            console.log(response);
           response.json().then(function(data) {
-                console.log(data);
                 randomFactEl.textContent = 'Fun Fact: ' + data.data.fact
           });
         }
