@@ -9,28 +9,29 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
     integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <title>Leet Trivia</title>
+    <title>Buzz Trivia</title>
 </head>
 
 <body>
     <nav>
         <div class="nav-wrapper">
-            <a class="brand-logo">Leet Trivia</a>
+            <i class="fas fa-blog logo"></i>
+            <a class="brand-logo">uzz Trivia</a>
             <ul class="right hide-on-med-and-down">
                 <li><a onclick="randomQuiz()">Random Quiz</a></li>
-              <li><a href="index.html"><i class="fas fa-home"></i></a></li>
+                <li><a href="index.html"><i class="fas fa-home"></i></a></li>
+                <li><a onclick="highScoreList()"><i class="fas fa-list"></i></a></li>
             </ul>
           </div>
     </nav>
 
     <div class="container">
-
         <section id="catPage">
             <div class="row">
                 <div class="col s12">
                     <div class="card">
                         <div class="card-content white-text">
-                            <span class="card-title">Welcome to Leet Trivia</span>
+                            <span class="card-title">Welcome to<i class="fas fa-blog logo"></i>uzz Trivia</span>
                             <p>Please select from one of the following categories.</p>
                         </div>
                     </div>
@@ -104,9 +105,7 @@
 
         <section id="quizPage" style="display:none">
             <div class="row">
-                <div class="col s12">
-                    <p id="question"></p>
-                </div>
+                <p id="question"></p>
             </div>
 
             <div class="row">
@@ -154,16 +153,32 @@
         <section id="finalPage" style="display:none">
             <div class="row">
                 <div class="col s12">
-                        <div class="card-content white-text">
-                            <span class="card-title">Good Job!</span>
-                            <p>You got a <span id="finalscoreEl"></span> out of 100!</p>
-                        </div>
+                    <div class="card-content white-text">
+                        <span class="card-title">Good Job!</span>
+                        <p>You got a <span id="finalscoreEl"></span> out of 100!</p>
                     </div>
                 </div>
-            
+            </div>
+            <div class="row">
+                <p>Please Enter Your Name:</p>
+                <div class="col s6">
+                    <input type="text" id = "nameEl" placeholder="Dwayne 'The Rock' Johnson" ></input>
+                </div>
+                <div class="col s6">
+                    <button id="submitBtn" class="btn"><i class="fas fa-arrow-alt-circle-right"></i></button>
+                </div>
+            </div>
             <div class="row">
                 <p id="randomFactEl"></p>
             </div>
+        </section>
+
+        <section id="highScorePage" style="display:none">
+            <h2>Score List:</h2>
+            <div id="highScoreListEl" class="row">
+            </div>
+            <button class="btn" id="clearBtn">Clear Scores</button>
+            <button class="btn" id="homeBtn">Go Home</button>
         </section>
     </div>
     <!-- Compiled and minified JavaScript -->
