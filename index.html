@@ -9,28 +9,29 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
     integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <title>Leet Trivia</title>
+    <title>Buzz Trivia</title>
 </head>
 
 <body>
     <nav>
         <div class="nav-wrapper">
-            <a class="brand-logo">Leet Trivia</a>
+            <i class="fas fa-blog logo"></i>
+            <a class="brand-logo">uzz Trivia</a>
             <ul class="right hide-on-med-and-down">
                 <li><a onclick="randomQuiz()">Random Quiz</a></li>
-              <li><a href="index.html"><i class="fas fa-home"></i></a></li>
+                <li><a href="index.html"><i class="fas fa-home"></i></a></li>
+                <li><a onclick="highScoreList()"><i class="fas fa-list"></i></a></li>
             </ul>
           </div>
     </nav>
 
     <div class="container">
-
         <section id="catPage">
             <div class="row">
                 <div class="col s12">
                     <div class="card">
                         <div class="card-content white-text">
-                            <span class="card-title">Welcome to Leet Trivia</span>
+                            <span class="card-title">Welcome to<i class="fas fa-blog logo"></i>uzz Trivia</span>
                             <p>Please select from one of the following categories.</p>
                         </div>
                     </div>
@@ -45,33 +46,18 @@
                     <button class="btn" onclick="catSelector('4')">Music</button>
                     <button class="btn" onclick="catSelector('5')">Theatre</button>
                     <button class="btn" onclick="catSelector('6')">Television</button>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col s12">
                     <button class="btn" onclick="catSelector('7')">Video Games</button>
                     <button class="btn" onclick="catSelector('8')">Board Games</button>
                     <button class="btn" onclick="catSelector('9')">Science</button>
                     <button class="btn" onclick="catSelector('10')">Computers</button>
                     <button class="btn" onclick="catSelector('11')">Math</button>
                     <button class="btn" onclick="catSelector('12')">Mythology</button>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col s12">
                     <button class="btn" onclick="catSelector('13')">Sports</button>
                     <button class="btn" onclick="catSelector('14')">Geography</button>
                     <button class="btn" onclick="catSelector('15')">History</button>
                     <button class="btn" onclick="catSelector('16')">Politics</button>
                     <button class="btn" onclick="catSelector('17')">Art</button>
                     <button class="btn" onclick="catSelector('18')">Celebrities</button>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col s12">
                     <button class="btn" onclick="catSelector('19')">Animals</button>
                     <button class="btn" onclick="catSelector('20')">Vehicles</button>
                     <button class="btn" onclick="catSelector('21')">Comic Books</button>
@@ -104,13 +90,11 @@
 
         <section id="quizPage" style="display:none">
             <div class="row">
-                <div class="col s12">
-                    <p id="question"></p>
-                </div>
+                <p id="question"></p>
             </div>
 
             <div class="row">
-                    <button class="btn" id="answer1" onclick="checkAnswer('1')"></button>
+                <button class="btn" id="answer1" onclick="checkAnswer('1')"></button>
             </div>
             <div class="row">
                 <button class="btn" id="answer2" onclick="checkAnswer('2')"></button>
@@ -154,16 +138,32 @@
         <section id="finalPage" style="display:none">
             <div class="row">
                 <div class="col s12">
-                        <div class="card-content white-text">
-                            <span class="card-title">Good Job!</span>
-                            <p>You got a <span id="finalscoreEl"></span> out of 100!</p>
-                        </div>
+                    <div class="card-content white-text">
+                        <span class="card-title">Good Job!</span>
+                        <p>You got a <span id="finalscoreEl"></span> out of 100!</p>
                     </div>
                 </div>
-            
+            </div>
+            <div class="row">
+                <p>Please Enter Your Name:</p>
+                <div class="col s6">
+                    <input type="text" id = "nameEl" placeholder="Dwayne 'The Rock' Johnson" ></input>
+                </div>
+                <div class="col s6">
+                    <button id="submitBtn" class="btn"><i class="fas fa-arrow-alt-circle-right"></i></button>
+                </div>
+            </div>
             <div class="row">
                 <p id="randomFactEl"></p>
             </div>
+        </section>
+
+        <section id="highScorePage" style="display:none">
+            <h2>Score List:</h2>
+            <div id="highScoreListEl" class="row">
+            </div>
+            <button class="btn" id="clearBtn">Clear Scores</button>
+            <button class="btn" id="homeBtn">Go Home</button>
         </section>
     </div>
     <!-- Compiled and minified JavaScript -->
