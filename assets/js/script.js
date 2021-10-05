@@ -1,12 +1,15 @@
+// Button Elements
 const errorhomeBtn = document.getElementById('errorhomeBtn');
 const submitBtn = document.getElementById('submitBtn');
 
+// Question and Answer Elements
 const questionEl = document.getElementById('question');
 const answer1 = document.getElementById('answer1');
 const answer2 = document.getElementById('answer2');
 const answer3 = document.getElementById('answer3');
 const answer4 = document.getElementById('answer4');
 
+// Text Replace or Insert Texts Elements
 const scoreEl = document.getElementById('scoreEl');
 const finalscoreEl = document.getElementById('finalscoreEl');
 const giphyEl = document.getElementById('giphyEl');
@@ -14,7 +17,7 @@ const randomFactEl = document.getElementById('randomFactEl');
 const nameEl = document.getElementById('nameEl');
 const highScoreListEl = document.getElementById('highScoreListEl');
 
-
+// Some Variables
 var catNumber = 0;
 var diffSelect = '';
 var score = 0;
@@ -43,8 +46,9 @@ function generateQuiz() {
         });
       }
     })
-
 };
+
+// Function that will Generate a quiz if the user selects the Random Quiz Button
 function randomQuiz() {
     document.getElementById("catPage").style.display = "none";
     document.getElementById("diffPage").style.display = "none";
@@ -63,6 +67,7 @@ function randomQuiz() {
         }
     })
 }
+
 // Function to display question to user
 var displayQuestion = function() {
     document.getElementById("quizPage").style.display = "block";
@@ -122,16 +127,19 @@ function checkAnswer(answer) {
     }
 }
 
+// Function that will play a sound that would indicate the user selected the correct answer
 function playCorrectAudio() {
     const correctAudio = new Audio('assets/audio/correct.mp3');
     correctAudio.play();
 }
 
+// Function that will play a sound that would indicate the user selected an incorrect answer
 function playIncorrectAudio() {
     const incorrectAudio = new Audio('assets/audio/incorrect.mp3');
     incorrectAudio.play();
 }
-// Category Selectory
+
+// Category Selectory based on what button user clicked on main screen
 function catSelector(category) {
     if (category === '1') {catNumber = 9;catName = 'General';
     } else if (category === '2') {catNumber = 10; catName = 'Books';
@@ -181,6 +189,7 @@ function setCounterText() {
     scoreEl.textContent = score;
 }
 
+// Function to display final score on final score page
 function setfinalScore() {
     finalscoreEl.textContent = score;
     document.getElementById("quizPage").style.display = "none";
@@ -191,8 +200,9 @@ errorhomeBtn.onclick = function() {
     location.reload();
 }
 
+// Function to generate a gif api related to the category selected
 function generateGiphyAPI() {
-    var apiUrl = 'https://api.giphy.com/v1/gifs/search?q=' + catName + '&api_key=xtreWFpTnhdH2BI9jKSi7X1Kz6ioQnM';
+    var apiUrl = 'https://api.giphy.com/v1/gifs/search?q=' + catName + '&api_key=AxtreWFpTnhdH2BI9jKSi7X1Kz6ioQnM';
 
     fetch(apiUrl).then(function(response) {
       if (response.ok) {
@@ -202,9 +212,9 @@ function generateGiphyAPI() {
         });
       }
     })
-
 }
 
+// Prints the gif from the gif api on the question screen
 function generateGiphy() {
     var randomNumber = Math.floor(Math.random() * giphyArray.data.length)
     var gifImg = document.createElement('img')
@@ -216,6 +226,7 @@ function generateGiphy() {
     giphyEl.appendChild(gifImg);
 }
 
+// Generates a random fact and displays it on the final score page
 function generateRandomFact() {
     var apiUrl = 'https://asli-fun-fact-api.herokuapp.com/';
     fetch(apiUrl).then(function(response) {
@@ -227,6 +238,7 @@ function generateRandomFact() {
     })
 }
 
+// Submits user name into local storage when they click the button
 submitBtn.onclick = function() {
     const name = nameEl.value 
     let finalscore = ''
@@ -242,6 +254,7 @@ submitBtn.onclick = function() {
     }
 }
 
+// Creates the high score list on the webpage
 function highScoreList() {
     $('#highScoreListEl').children().remove();
     document.getElementById("catPage").style.display = "none";
@@ -263,11 +276,13 @@ function highScoreList() {
     }
 }
 
+// function to clear local storage
 $('#clearBtn').on("click", function() {
     localStorage.clear();
     highScoreList();
 });
 
+// function to go back to main page
 $('#homeBtn').on("click", function() {
     location.reload();
 });

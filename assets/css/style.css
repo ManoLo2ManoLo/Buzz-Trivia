@@ -1,39 +1,107 @@
+body {
+    background-color: black;
+}
+
+.title {
+    margin-top: 15px;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.miniTitle {
+    font-size: 30px;
+}
+
 .nav-wrapper {
     background-color: black;
 }
 
-.btn {
+.category {
     font-size: 12pt;
-    background-color:midnightblue;
-    padding: 0px;
-    width: 30%;
+    padding: 0px auto;
     margin: 5pt;
-    
+    width: 30%;
 } 
+
+.btn {
+    font-size: 16pt;
+    border-radius: 10px;
+    box-shadow: 4px 4px 4px rgb(32, 32, 32);
+    margin:15px;
+}
 
 .btn:hover {
     background-color: midnightblue;
-    opacity: 50%;
+    opacity: 90%;
+    box-shadow: 4px 4px 4px rgb(15, 15, 15);
 }
 
 .card-content {
     background-color: gray;
     text-align: center;
     font-weight: bold;
+    padding:20px;
 }
 
 p {
+    color: white;
     font-weight: bold;
     font-size: 15pt;
     text-align: center;
     text-shadow: 5pt black;
 }
 
-.card-title {
-    font-weight: bold;
-    background-color: gray;
+header {
+    width: 100%;
+    background-color: black;
+    margin-top: -15px;
 }
 
-.logo {
-    margin-left: 20px;
+header ul {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+
+header ul li {
+    padding: 20px;
+  
+}
+
+.colorize {
+    color: white;
+    font-size: 30px;
+}
+
+.input {
+    background-color: midnightblue;
+    border: 2px solid midnightblue;
+}
+
+.colorize:hover {
+    cursor: pointer;
+    color: gray
+}
+
+.inputArea {
+    background-color: midnightblue;
+    font-size: 30px;
+    border: 3px white solid;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 600px) {
+    .btn {
+        font-size: 10pt;
+    }
+
+    .miniTitle {
+        font-size:20pt;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .btn {
+        font-size: 8pt;
+    }
 }
