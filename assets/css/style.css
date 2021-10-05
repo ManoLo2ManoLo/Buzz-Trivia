@@ -1,0 +1,18 @@
+.nav-wrapper {
+    background-color: black;
+}
+
+.btn {
+    font-size: 12pt;
+    background-color:midnightblue;
+    padding: 0px;
+    width: 30%;
+    margin: 5pt;
+    
+} 
+
+.btn:hover {
+    background-color: midnightblue;
+    opacity: 50%;
+}
+
