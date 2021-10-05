@@ -39,7 +39,7 @@
             <div class="row">
                 <div class="col s12">
                     <button class="btn" onclick="catSelector('1')">General</button>
-                    <button class="btn indigo darken-4 wave-effect waves-light" onclick="catSelector('2')">Books</button>
+                    <button class="btn" onclick="catSelector('2')">Books</button>
                     <button class="btn" onclick="catSelector('3')">Film</button>
                     <button class="btn" onclick="catSelector('4')">Music</button>
                     <button class="btn" onclick="catSelector('5')">Theatre</button>
@@ -124,6 +124,10 @@
             <div class="row">
                 <p>Score: <span id="scoreEl">0</span></p>
             </div>
+
+            <div class="row" id="giphyEl">
+                <!-- Inside here the gif is created with the class name 'giphy'-->
+            </div>
         </section>
 
         <section id="errorPage" style="display:none">
@@ -159,6 +163,7 @@
         </section>
     </div>
     <!-- Compiled and minified JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="./assets/js/script.js"></script>
 </body>
