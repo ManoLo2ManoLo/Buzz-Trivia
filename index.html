@@ -17,6 +17,7 @@
         <div class="nav-wrapper">
             <a class="brand-logo">Leet Trivia</a>
             <ul class="right hide-on-med-and-down">
+                <li><a onclick="randomQuiz()">Random Quiz</a></li>
               <li><a href="index.html"><i class="fas fa-home"></i></a></li>
             </ul>
           </div>
@@ -124,6 +125,10 @@
             <div class="row">
                 <p>Score: <span id="scoreEl">0</span></p>
             </div>
+
+            <div class="row" id="giphyEl">
+                <!-- Inside here the gif is created with the class name 'giphy'-->
+            </div>
         </section>
 
         <section id="errorPage" style="display:none">
@@ -155,10 +160,14 @@
                         </div>
                     </div>
                 </div>
+            
+            <div class="row">
+                <p id="randomFactEl"></p>
             </div>
         </section>
     </div>
     <!-- Compiled and minified JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="./assets/js/script.js"></script>
 </body>

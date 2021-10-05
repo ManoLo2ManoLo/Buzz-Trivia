@@ -44,7 +44,7 @@ function generateQuiz() {
 
 // Function to display question to user
 var displayQuestion = function() {
-    document.getElementById("quizPage").style.display = "inline-block";
+    document.getElementById("quizPage").style.display = "block";
 
     if (questionCounter > 10) {
         setfinalScore();    
