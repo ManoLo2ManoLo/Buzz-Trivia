@@ -14,25 +14,29 @@
 
 <body>
     <nav>
-        <div class="nav-wrapper">
-            <i class="fas fa-blog logo"></i>
-            <a class="brand-logo">uzz Trivia</a>
-            <ul class="right hide-on-med-and-down">
-                <li><a onclick="randomQuiz()">Random Quiz</a></li>
-                <li><a href="index.html"><i class="fas fa-home"></i></a></li>
-                <li><a onclick="highScoreList()"><i class="fas fa-list"></i></a></li>
-            </ul>
-          </div>
+        <div class="nav-wrapper center-align">
+            <a class="title"><i class="fas fa-blog title"></i>uzz Trivia</a>
+        </div>
     </nav>
 
-    <div class="container">
+    <header>
+        <div class="center-align">
+            <ul>
+                <li><a class="colorize" onclick="randomQuiz()">Random Quiz</a></li>
+                <li><a class="colorize" href="index.html"><i class="fas fa-home"></i></a></li>
+                <li><a class="colorize" onclick="highScoreList()"><i class="fas fa-list"></i></a></li>
+            </ul>
+        </div> 
+    </header>
+
+    <div class="container center-align">
         <section id="catPage">
             <div class="row">
                 <div class="col s12">
                     <div class="card">
                         <div class="card-content white-text">
-                            <span class="card-title">Welcome to<i class="fas fa-blog logo"></i>uzz Trivia</span>
-                            <p>Please select from one of the following categories.</p>
+                            <p class="miniTitle">Welcome to <i class="fas fa-blog logo"></i>uzz Trivia</p>
+                            <p class="miniTitle">Please select from one of the following categories.</p>
                         </div>
                     </div>
                 </div>
@@ -46,33 +50,18 @@
                     <button class="category btn indigo darken-4" onclick="catSelector('4')">Music</button>
                     <button class="category btn indigo darken-4" onclick="catSelector('5')">Theatre</button>
                     <button class="category btn indigo darken-4" onclick="catSelector('6')">Television</button>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col s12 center-align">
                     <button class="category btn indigo darken-4" onclick="catSelector('7')">Video Games</button>
                     <button class="category btn indigo darken-4" onclick="catSelector('8')">Board Games</button>
                     <button class="category btn indigo darken-4" onclick="catSelector('9')">Science</button>
                     <button class="category btn indigo darken-4" onclick="catSelector('10')">Computers</button>
                     <button class="category btn indigo darken-4" onclick="catSelector('11')">Math</button>
                     <button class="category btn indigo darken-4" onclick="catSelector('12')">Mythology</button>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col s12 center-align">
                     <button class="category btn indigo darken-4" onclick="catSelector('13')">Sports</button>
                     <button class="category btn indigo darken-4" onclick="catSelector('14')">Geography</button>
                     <button class="category btn indigo darken-4" onclick="catSelector('15')">History</button>
                     <button class="category btn indigo darken-4" onclick="catSelector('16')">Politics</button>
                     <button class="category btn indigo darken-4" onclick="catSelector('17')">Art</button>
                     <button class="category btn indigo darken-4" onclick="catSelector('18')">Celebrities</button>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col s12 center-align">
                     <button class="category btn indigo darken-4" onclick="catSelector('19')">Animals</button>
                     <button class="category btn indigo darken-4" onclick="catSelector('20')">Vehicles</button>
                     <button class="category btn indigo darken-4" onclick="catSelector('21')">Comic Books</button>
@@ -88,7 +77,7 @@
                 <div class="col s12">
                     <div class="card">
                         <div class="card-content white-text">
-                            <p>Please select from on of the following difficulties.</p>
+                            <p class="miniTitle">Please select from on of the following difficulties.</p>
                         </div>
                     </div>
                 </div>
@@ -105,27 +94,19 @@
 
         <section id="quizPage" style="display:none">
             <div class="row">
-                <p id="question"></p>
+                <p id="question" class="miniTitle"></p>
             </div>
+            
+            <button class="btn indigo darken-4" id="answer1" onclick="checkAnswer('1')"></button>
+            <button class="btn indigo darken-4" id="answer2" onclick="checkAnswer('2')"></button>
+            <button class="btn indigo darken-4" id="answer3" onclick="checkAnswer('3')"></button>
+            <button class="btn indigo darken-4" id="answer4" onclick="checkAnswer('4')"></button>
 
             <div class="row">
-                    <button class="btn indigo darken-4" id="answer1" onclick="checkAnswer('1')"></button>
-            </div>
-            <div class="row">
-                <button class="btn indigo darken-4" id="answer2" onclick="checkAnswer('2')"></button>
-            </div>
-            <div class="row">
-                <button class="btn indigo darken-4" id="answer3" onclick="checkAnswer('3')"></button>
-            </div>
-            <div class="row">
-                <button class="btn indigo darken-4" id="answer4" onclick="checkAnswer('4')"></button>
+                <p class="miniTitle">Score: <span id="scoreEl">0</span></p>
             </div>
 
-            <div class="row">
-                <p>Score: <span id="scoreEl">0</span></p>
-            </div>
-
-            <div class="row" id="giphyEl">
+            <div class="row center-align" id="giphyEl">
                 <!-- Inside here the gif is created with the class name 'giphy'-->
             </div>
         </section>
@@ -145,7 +126,7 @@
 
             <div class="row">
                 <div class="col s12">
-                    <button class="btn indigo darken-4" id="errorhomeBtn indigo darken-4">Go Home</button>
+                    <button class="btn indigo darken-4" id="errorhomeBtn">Go Home</button>
                 </div>
             </div>
         </section>
@@ -154,19 +135,15 @@
             <div class="row">
                 <div class="col s12">
                     <div class="card-content white-text">
-                        <span class="card-title">Good Job!</span>
-                        <p>You got a <span id="finalscoreEl"></span> out of 100!</p>
+                        <span class="miniTitle">Good Job!</span>
+                        <p class="miniTitle">You got a <span id="finalscoreEl"></span> out of 100!</p>
                     </div>
                 </div>
             </div>
             <div class="row">
-                <p>Please Enter Your Name:</p>
-                <div class="col s6">
-                    <input type="text" id = "nameEl" placeholder="Dwayne 'The Rock' Johnson" ></input>
-                </div>
-                <div class="col s6">
-                    <button id="submitBtn" class="btn"><i class="fas fa-arrow-alt-circle-right"></i></button>
-                </div>
+                <p class="miniTitle">Please Enter Your Name:</p>
+                <textarea type="text" id = "nameEl" class="white-text inputArea center-align" placeholder="Dwayne 'The Rock' Johnson" ></textarea>
+                <button id="submitBtn" class="btn indigo darken-4">Submit Score</button>
             </div>
             <div class="row">
                 <p id="randomFactEl"></p>
@@ -174,11 +151,13 @@
         </section>
 
         <section id="highScorePage" style="display:none">
-            <h2>Score List:</h2>
+            <h2 class="center-align white-text">Score List:</h2>
             <div id="highScoreListEl" class="row">
             </div>
-            <button class="btn" id="clearBtn">Clear Scores</button>
-            <button class="btn" id="homeBtn">Go Home</button>
+            <div class="row center-align">
+                <button class="btn indigo darken-4" id="clearBtn">Clear Scores</button>
+                <button class="btn indigo darken-4" id="homeBtn">Go Home</button>
+            </div>  
         </section>
     </div>
     <!-- Compiled and minified JavaScript -->
