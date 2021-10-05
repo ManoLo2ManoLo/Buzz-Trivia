@@ -38,7 +38,6 @@ function generateQuiz() {
                 console.log('ERROR MESSAGE');
                 document.getElementById("errorPage").style.display = "block";
             } else {
-                console.log(data);
                 questionArray = data;
                 displayQuestion();
                 generateRandomFact();
@@ -62,7 +61,6 @@ function randomQuiz() {
             response.json().then(function(data) {
                 questionArray = data;
                 displayQuestion();
-                generateRandomFact();
             });
         }
     })
@@ -286,3 +284,7 @@ $('#clearBtn').on("click", function() {
 $('#homeBtn').on("click", function() {
     location.reload();
 });
+
+$(document).ready(function() {
+    generateRandomFact();
+})

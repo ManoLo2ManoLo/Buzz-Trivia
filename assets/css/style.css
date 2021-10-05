@@ -90,6 +90,11 @@ header ul li {
     border-radius: 10px;
 }
 
+.giphy {
+    border: 5px solid midnightblue;
+    border-radius: 10px;
+}
+
 @media screen and (max-width: 600px) {
     .btn {
         font-size: 10pt;
@@ -97,6 +102,10 @@ header ul li {
 
     .miniTitle {
         font-size:20pt;
+    }
+
+    .giphy {
+        width: 90%;
     }
 }
 
