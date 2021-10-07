@@ -268,6 +268,7 @@ function highScoreList() {
 
         var hsOutput = document.createElement('p');
         hsOutput.innerHTML += `${key} ${value} <br>`;
+        hsOutput.classList = "highScores"
         
         highScoreListEl.appendChild(hsOutput);
         console.log(hsOutput)
