@@ -1,7 +1,7 @@
 # Buzz Trivia
 
 # LINK SECTION
-Link to Github Repository: https://github.com/ManoLo2ManoLo/Project-1-Quiz-Game.git
+Link to Github Repository: https://github.com/ManoLo2ManoLo/Project-1-Quiz-Game.git <br />
 Link to Application: https://manolo2manolo.github.io/Project-1-Quiz-Game/index.html
 
 # INTRODUCTION
@@ -15,31 +15,32 @@ This code was prepared for Project 1 for Rutgers University Bootcamp by Adam Aba
 
 # NECESSARY FILES
 index.html (the structure of the webpage)
+
 -assets folder
 
---css folder
+--css folder <br />
 ---style.css (the styling of the webpage)
 
---js folder
+--js folder <br />
 ---script.js (the functionality of the webpage)
 
---images folder
+--images folder <br />
 ---favi.ico (the favicon of the webpage)
 
---audio folder
----correct.mp3
+--audio folder <br />
+---correct.mp3 <br />
 ---incorrect.mp3
 
 # THIRD-PARTY API
-Link to Materialize (CSS): https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css
-Link to Materialize (JS): https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js
-Link to Font Awesome (CSS): https://use.fontawesome.com/releases/v5.8.1/css/all.css
+Link to Materialize (CSS): https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css <br />
+Link to Materialize (JS): https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js <br />
+Link to Font Awesome (CSS): https://use.fontawesome.com/releases/v5.8.1/css/all.css <br />
 Link to J Query (JS): https://code.jquery.com/jquery-3.5.0.min.js
 
 # SERVER-SIDE API
-Link to Open Trivia: https://opentdb.com/api_config.php
-Link to Giphy (for the gifs): https://developers.giphy.com/
-Link to Fun Fact Generator: https://asli-fun-fact-api.herokuapp.com/
+Link to Open Trivia: https://opentdb.com/api_config.php <br />
+Link to Giphy (for the gifs): https://developers.giphy.com/ <br />
+Link to Fun Fact Generator: https://asli-fun-fact-api.herokuapp.com/ 
 
 # SCREENSHOTS
 ![Capture](https://user-images.githubusercontent.com/88077451/136289309-d4d6dffb-8e55-41c7-8589-808c78a1adbe.PNG)
