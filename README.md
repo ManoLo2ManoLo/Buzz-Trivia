@@ -43,7 +43,29 @@ Link to Giphy (for the gifs): https://developers.giphy.com/ <br />
 Link to Fun Fact Generator: https://asli-fun-fact-api.herokuapp.com/ 
 
 # SCREENSHOTS
-![Capture](https://user-images.githubusercontent.com/88077451/136289309-d4d6dffb-8e55-41c7-8589-808c78a1adbe.PNG)
+In this image, it displays what the user will first see when the first open up the webpage, with a list of categories to choose from.
+![Screenshot (350)](https://user-images.githubusercontent.com/88364269/136726599-4a616bb7-0983-4aba-b47a-59912e7363ff.png)
+
+In this image, it displays the list of difficulty the user has to choose from.
+![Screenshot (359)](https://user-images.githubusercontent.com/88364269/136726671-9621daa3-32ec-4fe0-841b-67df15858079.png)
+
+In this image, it displays how the question and answered are displayed to the user, from a server side api. Underneath the answers, there is a score that increases by 10 everytime a user gets a question correct. With a gif on the bottom of the screen that is related to category chosen, from a server side api. 
+![Screenshot (352)](https://user-images.githubusercontent.com/88364269/136726833-e24fc7ba-769d-419d-bab8-5f38926aee5a.png)
+
+In this image, it display the user's final score with a textarea for the user to enter thier name, and submit it to local storage. On the bottom their is a fun fact that is generated from a server side api.
+![Screenshot (353)](https://user-images.githubusercontent.com/88364269/136727007-62d6e404-cc69-4a46-8ec5-18dd38a6af36.png)
+
+In this image, it displays the score list, from pervious scores the user had, alongside with the category and difficulty
+![Screenshot (356)](https://user-images.githubusercontent.com/88364269/136727180-a5c8fd3f-30eb-4c96-a2f8-772bea417dcd.png)
+
+In this image, it displays how responsive the webpage is to a cell phone (iphone x)
+![Screenshot (357)](https://user-images.githubusercontent.com/88364269/136727351-403a8ee9-fec7-4db9-8fdf-c363ecbdcc6c.png)
+
+In this image, it displays how responsive the webpage is to a tablet (ipad pro)
+![Screenshot (360)](https://user-images.githubusercontent.com/88364269/136727445-456f1e72-d212-413b-9ced-4f1600a9f328.png)
+
+In this image, it displays an error message for quizes that may not have a quiz avaliable for that difficulty. Since we use a server side api, we dont not control which categories have certain difficulties readily avaliable. For Example math does not have an easy mode, but medium and hard are avaliable. But most categories have all three difficulties. This error page is displayed for those few instances.
+![Screenshot (361)](https://user-images.githubusercontent.com/88364269/136727597-2575dbe0-d5f6-4cbb-bd7c-77505ac2f5a9.png)
 
 # LICENSE
 Copyright (c) 2021 ManoLo2ManoLo

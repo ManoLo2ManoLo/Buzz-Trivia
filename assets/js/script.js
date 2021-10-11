@@ -30,6 +30,9 @@ var giphyArray = [];
 
 // Generates whats question the user will recive based on catefory and difficulty selected
 function generateQuiz() {
+    document.getElementById("catPage").style.display = "none";
+    document.getElementById("diffPage").style.display = "none";
+    document.getElementById("highScorePage").style.display = "none";
     var apiUrl = "https://opentdb.com/api.php?amount=10&category=" + catNumber + "&difficulty=" + diffSelect + "&type=multiple"
     fetch(apiUrl).then(function(response) {
       if (response.ok) {
@@ -47,25 +50,6 @@ function generateQuiz() {
     })
 };
 
-// Function that will Generate a quiz if the user selects the Random Quiz Button
-function randomQuiz() {
-    document.getElementById("catPage").style.display = "none";
-    document.getElementById("diffPage").style.display = "none";
-    document.getElementById("highScorePage").style.display = "none";
-
-    var apiUrl = 'https://opentdb.com/api.php?amount=10&type=multiple';
-    catName = 'Random';
-
-    fetch(apiUrl).then(function(response) {
-        if (response.ok) {
-            response.json().then(function(data) {
-                questionArray = data;
-                displayQuestion();
-            });
-        }
-    })
-}
-
 // Function to display question to user
 var displayQuestion = function() {
     document.getElementById("quizPage").style.display = "block";
@@ -76,7 +60,7 @@ var displayQuestion = function() {
   
     questionEl.innerHTML =  q.question;
         
-    var questionOrder = Math.floor(Math.random() * (5));
+    var questionOrder = Math.floor(Math.random() * (4) + 1);
 
     if (questionOrder === 1) {
         answer1.innerHTML = q.incorrect_answers[0];
@@ -274,6 +258,28 @@ function highScoreList() {
         console.log(hsOutput)
     }
 }
+
+// Function that will Generate a quiz if the user selects the Random Quiz Button
+$("#randomQuiz").on("click", function() {
+    var apiUrl = 'https://opentdb.com/api.php?amount=10&type=multiple';
+    catName = 'Random';
+
+    fetch(apiUrl).then(function(response) {
+        if (response.ok) {
+            response.json().then(function(data) {
+                questionCounter=1;
+                document.getElementById("finalPage").style.display = "none";
+                document.getElementById("errorPage").style.display = "none";
+                document.getElementById("catPage").style.display = "none";
+                document.getElementById("diffPage").style.display = "none";
+                document.getElementById("highScorePage").style.display = "none";
+                questionArray = data;
+                displayQuestion();
+            });
+        }
+    })
+})
+
 
 // function to clear local storage
 $('#clearBtn').on("click", function() {
