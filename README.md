@@ -1,48 +1,23 @@
 # Buzz Trivia
 
-# LINK SECTION
-Link to Github Repository: https://github.com/ManoLo2ManoLo/Project-1-Quiz-Game.git <br />
-Link to Application: https://manolo2manolo.github.io/Project-1-Quiz-Game/index.html
+## Link(s)
+Link to Application: https://manolo2manolo.github.io/Buzz-Trivia/
 
-# INTRODUCTION
+## Description
 Buzz Trivia was created for Project 1 and includes JavaScript, HTML, CSS files, and three APIs. The trivia app allows the user to take a break from their daily stresses. Buzz Trivia is a quiz app that allows the user to choose from 24 topics including: Sports, Computers, and Video Games among others. The user then can choose from three difficulties ranging from Easy, Medium and Hard. Each topic will provide the user with  10 multiple choice questions. At the end, the user will get a score, they will receive 10 points for each correct answer. The user will then be able to enter their name and record their high score. 
 
-# USAGE
+## Usage
 Once on Buzz trivia app the user will choose their desired topic, for example the user may choose Sports. The user will then be taken to a page where they will choose a difficulty level. If the user selects easy, the user will be brought to a page with the first of 10 questions. For each question the user will choose the answer they believe is correct. Once through all of the questions the user will get a score. They will be able to record their high score. 
 
-# CREDIT
-This code was prepared for Project 1 for Rutgers University Bootcamp by Adam Abare and Manuel Canas-Menendez.
-
-# NECESSARY FILES
-index.html (the structure of the webpage)
-
--assets folder
-
---css folder <br />
----style.css (the styling of the webpage)
-
---js folder <br />
----script.js (the functionality of the webpage)
-
---images folder <br />
----favi.ico (the favicon of the webpage)
-
---audio folder <br />
----correct.mp3 <br />
----incorrect.mp3
-
-# THIRD-PARTY API
-Link to Materialize (CSS): https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css <br />
-Link to Materialize (JS): https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js <br />
-Link to Font Awesome (CSS): https://use.fontawesome.com/releases/v5.8.1/css/all.css <br />
-Link to J Query (JS): https://code.jquery.com/jquery-3.5.0.min.js
-
-# SERVER-SIDE API
+## Third Party APIs
 Link to Open Trivia: https://opentdb.com/api_config.php <br />
 Link to Giphy (for the gifs): https://developers.giphy.com/ <br />
 Link to Fun Fact Generator: https://asli-fun-fact-api.herokuapp.com/ 
 
-# SCREENSHOTS
+## Clone Repository
+* git clone https://github.com/ManoLo2ManoLo/Buzz-Trivia.git
+
+## Screenshots
 In this image, it displays what the user will first see when the first open up the webpage, with a list of categories to choose from.
 ![Screenshot (350)](https://user-images.githubusercontent.com/88364269/136726599-4a616bb7-0983-4aba-b47a-59912e7363ff.png)
 
@@ -67,11 +42,13 @@ In this image, it displays how responsive the webpage is to a tablet (ipad pro)
 In this image, it displays an error message for quizes that may not have a quiz avaliable for that difficulty. Since we use a server side api, we dont not control which categories have certain difficulties readily avaliable. For Example math does not have an easy mode, but medium and hard are avaliable. But most categories have all three difficulties. This error page is displayed for those few instances.
 ![Screenshot (361)](https://user-images.githubusercontent.com/88364269/136727597-2575dbe0-d5f6-4cbb-bd7c-77505ac2f5a9.png)
 
-# LICENSE
-Copyright (c) 2021 ManoLo2ManoLo
+## Credit
+This application was typed and revised by Adam Abare and Manuel Canas-Menendez.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+* [Adam's Github](https://github.com/aabare)
+* [Manuel's Github](https://github.com/ManoLo2ManoLo)
 
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+## License
+<p align="center">
+    <img align="center" src="https://img.shields.io/github/license/ManoLo2ManoLo/Coding-Quiz?style=for-the-badge" alt="license" />
+</p>
