@@ -3,6 +3,14 @@
 ## Link(s)
 Link to Application: https://manolo2manolo.github.io/Buzz-Trivia/
 
+## Features
+    1. User has 24 category for a quick quiz.
+    2. Each category has 3 difficulties to them.
+    3. User can save their scores at the end.
+
+## User Story
+As a user looking for a quick enjoyment, I would like an application that will allow me to look to take a quick quiz within a short amount of time. I would also like to save my socres to keep track of previous scores.
+
 ## Description
 Buzz Trivia was created for Project 1 and includes JavaScript, HTML, CSS files, and three APIs. The trivia app allows the user to take a break from their daily stresses. Buzz Trivia is a quiz app that allows the user to choose from 24 topics including: Sports, Computers, and Video Games among others. The user then can choose from three difficulties ranging from Easy, Medium and Hard. Each topic will provide the user with  10 multiple choice questions. At the end, the user will get a score, they will receive 10 points for each correct answer. The user will then be able to enter their name and record their high score. 
 
